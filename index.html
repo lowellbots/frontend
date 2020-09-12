@@ -7,9 +7,10 @@
 <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 
 <script type="text/javascript" type="text/javascript">
+  var host = window.location.hostname;
   // Connecting to ROS
   var ros = new ROSLIB.Ros({
-    url : 'ws://wilson:9090'
+    url : 'ws://' + host + ':9090'
   });
 
   ros.on('connection', function() {
